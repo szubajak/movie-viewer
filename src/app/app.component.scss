@@ -1,0 +1,10 @@
+.container {
+  height: calc(100vh - 100px);
+}
+
+.toolbar {
+  height: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: min-content 1fr;
+}

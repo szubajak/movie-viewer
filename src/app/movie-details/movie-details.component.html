@@ -1,0 +1,21 @@
+<div class="movie-details-container">
+  <mat-card *ngIf="movie$ | async as movie" class="movie-card">
+    <mat-card-header>
+      <div mat-card-avatar></div>
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.tagline }}</mat-card-subtitle>
+    </mat-card-header>
+    <img
+      mat-card-image
+      src="{{ getPoster(movie.poster_path) }}"
+      alt="Poster not found"
+      class="poster"
+    />
+    <mat-card-content>
+      <p>
+        {{ movie.overview }}
+      </p>
+    </mat-card-content>
+  </mat-card>
+  <mat-spinner *ngIf="loading$ | async" class="spinner"></mat-spinner>
+</div>

@@ -1,0 +1,21 @@
+<div class="movie-list-container">
+  <cdk-virtual-scroll-viewport
+    itemSize="50"
+    *ngIf="movies$ | async as movies"
+    class="movie-list"
+  >
+    <mat-action-list>
+      <button
+        mat-list-item
+        *cdkVirtualFor="let movie of movies"
+        (click)="selectMovie(movie.id)"
+      >
+        {{ movie.title }}
+      </button>
+    </mat-action-list>
+  </cdk-virtual-scroll-viewport>
+
+  <div class="spinner" *ngIf="loading$ | async">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>

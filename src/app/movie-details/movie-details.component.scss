@@ -1,0 +1,18 @@
+.movie-details-container {
+  height: 100%;
+  display: grid;
+}
+
+.empty-movie,
+.spinner {
+  justify-self: center;
+  align-self: center;
+  font-size: 1.9rem;
+  color: blue;
+}
+
+.movie-card {
+  max-width: 400px;
+  padding: 50px;
+  margin: 20px;
+}

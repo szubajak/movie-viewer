@@ -1,0 +1,13 @@
+<mat-toolbar color="primary" class="toolbar">
+  <span>Movie Viewer</span>
+  <app-movie-search></app-movie-search>
+</mat-toolbar>
+
+<mat-sidenav-container class="container">
+  <mat-sidenav mode="side" opened>
+    <app-movie-list></app-movie-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-movie-details></app-movie-details>
+  </mat-sidenav-content>
+</mat-sidenav-container>

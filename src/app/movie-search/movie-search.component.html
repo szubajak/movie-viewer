@@ -1,0 +1,41 @@
+<mat-form-field class="key-input">
+  <mat-icon matPrefix>vpn_key</mat-icon>
+  <input
+    matInput
+    placeholder="Api key..."
+    type="text"
+    [(ngModel)]="apiKey"
+    (change)="onKeyChange()"
+  />
+  <button
+    mat-button
+    *ngIf="apiKey"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="clearApiKey()"
+  >
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-form-field>
+
+<mat-form-field class="search-input">
+  <mat-icon matPrefix>search</mat-icon>
+  <input
+    matInput
+    placeholder="Search..."
+    type="search"
+    [(ngModel)]="value"
+    (input)="search()"
+  />
+  <button
+    mat-button
+    *ngIf="value"
+    matSuffix
+    mat-icon-button
+    aria-label="Clear"
+    (click)="clear()"
+  >
+    <mat-icon>clear</mat-icon>
+  </button>
+</mat-form-field>
